@@ -1,0 +1,67 @@
+package fishingGame_pkg;
+
+import java.util.Scanner;
+
+public class Game {
+	static int total = 0;
+	static String fish;
+	static int point = 0;
+	static int kaisu = 3;
+	static int cnt = 1;
+	static int choiseSpot = 1;
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		start();
+
+	}
+
+	//ゲーム開始処理（メッセージ表示、得点を0に初期化）
+	private static void start() {
+		System.out.print("【釣りアプリ】");
+		System.out.println("");
+		System.out.println("---------------------------------");
+		//ゲーム開始
+		play();
+	}
+
+	public static void play() {
+		for (int i = 0; i < kaisu; i++) {
+			System.out.println(cnt + "回目のチャレンジ！");
+			System.out.println("スポット選択：1から4の釣り場を選んでください。");
+			System.out.println("（　半角数字　+　Enter　)");
+			game();
+		}
+		finish();
+
+	}
+
+	public static void game() {
+
+		//エンターが押されたら次の処理へ
+		choiseSpot = sc.nextInt();
+		if (choiseSpot >= 5) {
+			System.out.println("【エラー】入力値が不正です。再度入力してください");
+			game();
+		} else {
+			System.out.println("選んだスポット：" + choiseSpot);
+			System.out.print("釣れた魚：" + fish);
+			System.out.println("(" + point + "pt)");
+			System.out.println("---------------------------------");
+			System.out.println("合計点は" + total + "点です！！");
+			cnt++;
+		}
+	}
+
+	public static void game(int kaisu) {
+
+	}
+
+	//ゲーム終了処理（メッセージ表示、合計得点表示）
+	private static void finish() {
+		System.out.println("続行するには何かキーを押してください...");
+		sc.nextLine();
+	}
+
+}

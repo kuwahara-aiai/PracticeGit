@@ -1,0 +1,29 @@
+package fishingGame_pkg;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Place {
+	
+	//pboxが釣り場のリスト
+	//pboxに5つ分の魚を入れる？？5匹入れる？
+	public static void place() {
+	List<Fish> pbox = new ArrayList<>();
+		for(int i=0;i>5;i++) {
+			pbox = ChoiseRandom.randomFish();
+		}
+
+	}
+	//FishListのindex番目のFishを取得する
+	public static List<Fish> getFish(int index) {
+		
+		return null;//Fish[index];
+
+	}
+	//Pboxの数を取得する
+	public static int numOfPlaces() {
+		return 0;
+		
+	}
+}

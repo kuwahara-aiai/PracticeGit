@@ -1,0 +1,43 @@
+package fishingGame_pkg;
+
+public class Fish {
+	
+	//魚の名前
+	private String name;
+	//魚の得点
+	private int point;
+
+	
+	public Fish() {
+		this.name = "マグロ";
+		this.point = 100;
+	}
+
+	public Fish(String name, int point) {
+		this.name = name;
+		this.point = point;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getPoint() {
+		return point;
+	}
+
+	private Fish[] box = {
+			new Fish("マグロ", 100),
+			new Fish("タイ", 120),
+			new Fish("サケ", 80),
+			new Fish("ブリ", 70),
+			new Fish("イカ", 30),
+			new Fish("ホタテ", 20),
+			new Fish("アジ", 15),
+			new Fish("メダカ", 3),
+			new Fish("ゴミ", 0),
+			new Fish("おじさん", -50),
+	};
+
+
+}
